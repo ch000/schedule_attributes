@@ -122,7 +122,6 @@ module ScheduleAttributes
       parse_date_time(end_time_date, @params[:end_time])
     end
 
-    # if end_time < start_time, the schedule occurs over night
     def end_time_date
       return date_input unless @params[:start_time].present?
       return nil if @params[:all_day]
